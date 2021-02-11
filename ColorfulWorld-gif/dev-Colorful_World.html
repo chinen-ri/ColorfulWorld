@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta charset="UTF-8"/>
+<style>
+body, canvas {
+    background-color: #000;
+}
+.Rotate90{
+     transform: scale(1, -1) rotate(90deg);
+}
+.Rotate180{
+     transform: scale(1, -1); 
+}
+.Rotate270{
+     transform: scale(1, -1) rotate(270deg);
+}
+</style>
+</head>
+<body>
+     <button id="startButton">Start</button>
+
+
+     <!--<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+     <audio id="player" autoplay loop>
+          <source src="d1.mp3" type="audio/mp3">
+      </audio>-->
+
+     <audio src="d1.mp3"></audio>
+     <img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
+     <img src="Colorful_World.gif" style="position:absolute; top:250px; left:500px" class="Rotate90" />
+     <img src="Colorful_World.gif" style="position:absolute; top:500px; left:250px" class="Rotate180" />
+     <img src="Colorful_World.gif" style="position:absolute; top:250px; left:0px"   class="Rotate270" />
+
+
+     <script>
+          const startButton = document.getElementById('startButton');
+          const audio = document.getElementsByTagName("audio")[0]
+          
+
+          startButton.addEventListener('click', () => {
+               audio.play()
+             })
+          autoClick();
+          startButton.click();
+          
+          function autoClick () {
+               startButton.click();
+               console.log("test!")
+          }
+          autoClick();
+          
+     </script>
+
+</body>
+</html>
