@@ -1,4 +1,4 @@
 hello world !
 <html>
-<a href=“../index.html”>トップページへの相対リンク</a><br>
+<a href=“ColorfulWorld.html”>go to page</a><br>
 </html>
