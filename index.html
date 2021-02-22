@@ -41,34 +41,24 @@ body, canvas {
     // ボタンを押すとオーディオファイルを再生する
     var audiofile = document.getElementById("audiofile");
     var button = document.getElementById("button");
+    var hologram = document.getElementById("hologram");
   
     button.onclick = function(){
         audiofile.play()
         audiofile.loop = true
-    }
-    
-    //ポップアップを閉じたとき、ホログラムを表示する
-    function myFunction() {
-      var hologram = document.getElementById("hologram");
-      if (hologram.style.display === "none") {
-          console.log("display is none")
         hologram.style.display = "block";
-      } else {
-          console.log("display is not none")
-        hologram.style.display = "none";
-      }
     }
     
+   
     //windowロードしたとき、ポップアップを表示する
     window.onload = function() {
         console.log("inside window.onload function")
         
-        // hide hologram
-        var hologram = document.getElementById("hologram");
+        // ホログラムを非表示にする
+        
         hologram.style.display = "none";
         
-        
-        
+        // ポップアップを表示
         var popup = document.getElementById('js-popup');
         if(!popup) return;    
         popup.classList.add('is-show');
