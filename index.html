@@ -20,7 +20,7 @@ body, canvas {
 </style>
 </head>
 <body>
-   <input type="button" id="button" value="PLAY">    
+       
 　　<iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 　　<audio id="audiofile" src="d1.mp3"></audio>
     
@@ -28,6 +28,7 @@ body, canvas {
       <div class="popup-inner">
         <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
         <a href="#"><img src="popup.png" alt="CALL JACK"></a>
+        <input type="button" id="button" value="PLAY">
       </div>
       <div class="black-background" id="js-black-bg"></div>
     </div>
@@ -38,7 +39,7 @@ body, canvas {
 <img src="Colorful_World.gif" style="position:absolute; top:250px; left:0px"   class="Rotate270" />
 </body>
     <script>
-        /*
+        
            var audiofile = document.getElementById("audiofile");
            var button = document.getElementById("button");
            button.onclick = function(){
@@ -46,7 +47,7 @@ body, canvas {
                audiofile.play()
                //window.location.href="Colorful_World.html"
            }
-         */
+         
            console.log("This is index.html")
         
             window.onload = function() {
