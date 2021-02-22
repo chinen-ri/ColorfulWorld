@@ -26,7 +26,7 @@
       <div class="popup-inner">
         <input type="button" id="button" value="PLAY">
       </div>
-      <div class="black-background" id="js-black-bg"></div>
+      <!--<div class="black-background" id="js-black-bg"></div>-->
     </div>
     <div id="hologram">
         <img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
@@ -42,7 +42,7 @@
     var audiofile = document.getElementById("audiofile");
     var button = document.getElementById("button");
     var hologram = document.getElementById("hologram");
-    var blackBg = document.getElementById('js-black-bg');
+    //var blackBg = document.getElementById('js-black-bg');
   
     // ボタンを押すとオーディオファイルを再生する
     button.onclick = function(){
@@ -66,7 +66,7 @@
         
         //var blackBg = document.getElementById('js-black-bg');
         //var button = document.getElementById("button");
-        closePopUp(blackBg);
+        //closePopUp(blackBg);
         closePopUp(button);
         
         // ポップアップを閉じる
