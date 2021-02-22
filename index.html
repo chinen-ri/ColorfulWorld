@@ -20,8 +20,6 @@ body, canvas {
 </style>
 </head>
 <body>
-       
-　　<iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 　　<audio id="audiofile" src="d1.mp3"></audio>
     
     <div class="popup" id="js-popup">
@@ -31,41 +29,39 @@ body, canvas {
       <div class="black-background" id="js-black-bg"></div>
     </div>
     
-<img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
-<img src="Colorful_World.gif" style="position:absolute; top:250px; left:500px" class="Rotate90" />
-<img src="Colorful_World.gif" style="position:absolute; top:500px; left:250px" class="Rotate180" />
-<img src="Colorful_World.gif" style="position:absolute; top:250px; left:0px"   class="Rotate270" />
+    <img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
+    <img src="Colorful_World.gif" style="position:absolute; top:250px; left:500px" class="Rotate90" />
+    <img src="Colorful_World.gif" style="position:absolute; top:500px; left:250px" class="Rotate180" />
+    <img src="Colorful_World.gif" style="position:absolute; top:250px; left:0px"   class="Rotate270" />
 </body>
-    <script>
+<script>
+    console.log("This is index.html")
+    var audiofile = document.getElementById("audiofile");
+    var button = document.getElementById("button");
+  
+    button.onclick = function(){
+        audiofile.play()
+        audiofile.loop = true
+    }
+    
+    window.onload = function() {
+        console.log("inside window.onload function")
         
-           var audiofile = document.getElementById("audiofile");
-           var button = document.getElementById("button");
-           button.onclick = function(){
-               console.log("button pushed!")
-               audiofile.play()
-               audiofile.loop = true
-           }
-         
-           console.log("This is index.html")
+        var popup = document.getElementById('js-popup');
+        if(!popup) return;    
+        popup.classList.add('is-show');
         
-            window.onload = function() {
-              console.log("inside window.onload function")
-              var popup = document.getElementById('js-popup');
-              if(!popup) return;
-              popup.classList.add('is-show');
-
-              var blackBg = document.getElementById('js-black-bg');
-              var button = document.getElementById("button");
-              closePopUp(blackBg);
-              closePopUp(button);
-
-              function closePopUp(elem) {
-                if(!elem) return;
-                elem.addEventListener('click', function() {
-                  popup.classList.remove('is-show');
-                })
-              }
-            }
-            
-    </script>
+        var blackBg = document.getElementById('js-black-bg');
+        var button = document.getElementById("button");
+        closePopUp(blackBg);
+        closePopUp(button);
+        
+        function closePopUp(elem) {
+            if(!elem) return;          
+            elem.addEventListener('click', function() {
+              popup.classList.remove('is-show');
+            })
+          }
+        }
+</script>
 </html>
