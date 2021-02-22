@@ -63,6 +63,12 @@ body, canvas {
     window.onload = function() {
         console.log("inside window.onload function")
         
+        // hide hologram
+        var hologram = document.getElementById("hologram");
+        hologram.style.display = "none";
+        
+        
+        
         var popup = document.getElementById('js-popup');
         if(!popup) return;    
         popup.classList.add('is-show');
