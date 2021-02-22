@@ -1,23 +1,23 @@
 <html>
 <head>
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="UTF-8"/>
-<style>
-body, canvas {
-    background-color: #000;
-}
-.Rotate90{
-     transform: scale(1, -1) rotate(90deg);
-}
-.Rotate180{
-     transform: scale(1, -1); 
-}
-.Rotate270{
-     transform: scale(1, -1) rotate(270deg);
-}
-</style>
+    <style>
+        body, canvas {
+            background-color: #000;
+        }
+        .Rotate90{
+             transform: scale(1, -1) rotate(90deg);
+        }
+        .Rotate180{
+             transform: scale(1, -1); 
+        }
+        .Rotate270{
+             transform: scale(1, -1) rotate(270deg);
+        }
+    </style>
 </head>
 <body>
 　　<audio id="audiofile" src="d1.mp3"></audio>
@@ -38,11 +38,13 @@ body, canvas {
 <script>
     console.log("This is index.html")
     
-    // ボタンを押すとオーディオファイルを再生する
+    
     var audiofile = document.getElementById("audiofile");
     var button = document.getElementById("button");
     var hologram = document.getElementById("hologram");
+    var blackBg = document.getElementById('js-black-bg');
   
+    // ボタンを押すとオーディオファイルを再生する
     button.onclick = function(){
         audiofile.play()
         audiofile.loop = true
@@ -50,12 +52,11 @@ body, canvas {
     }
     
    
-    //windowロードしたとき、ポップアップを表示する
+    //windowロードしたときに実行するJS
     window.onload = function() {
         console.log("inside window.onload function")
         
         // ホログラムを非表示にする
-        
         hologram.style.display = "none";
         
         // ポップアップを表示
@@ -63,11 +64,12 @@ body, canvas {
         if(!popup) return;    
         popup.classList.add('is-show');
         
-        var blackBg = document.getElementById('js-black-bg');
-        var button = document.getElementById("button");
+        //var blackBg = document.getElementById('js-black-bg');
+        //var button = document.getElementById("button");
         closePopUp(blackBg);
         closePopUp(button);
         
+        // ポップアップを閉じる
         function closePopUp(elem) {
             if(!elem) return;          
             elem.addEventListener('click', function() {
