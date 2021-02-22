@@ -45,7 +45,6 @@ body, canvas {
            button.onclick = function(){
                console.log("button pushed!")
                audiofile.play()
-               //window.location.href="Colorful_World.html"
            }
          
            console.log("This is index.html")
@@ -58,8 +57,9 @@ body, canvas {
 
               var blackBg = document.getElementById('js-black-bg');
               var closeBtn = document.getElementById('js-close-btn');
-
-              closePopUp(blackBg);
+              var button = document.getElementById("button");
+              //closePopUp(blackBg);
+              closePopUp(button);
               closePopUp(closeBtn);
 
               function closePopUp(elem) {
