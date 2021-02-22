@@ -51,8 +51,10 @@ body, canvas {
     function myFunction() {
       var hologram = document.getElementById("hologram");
       if (hologram.style.display === "none") {
+          console.log("display is none")
         hologram.style.display = "block";
       } else {
+          console.log("display is not none")
         hologram.style.display = "none";
       }
     }
