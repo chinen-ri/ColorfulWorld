@@ -43,6 +43,7 @@ body, canvas {
            button.onclick = function(){
                console.log("button pushed!")
                audiofile.play()
+               audiofile.loop = true
            }
          
            console.log("This is index.html")
@@ -54,11 +55,9 @@ body, canvas {
               popup.classList.add('is-show');
 
               var blackBg = document.getElementById('js-black-bg');
-              //var closeBtn = document.getElementById('js-close-btn');
               var button = document.getElementById("button");
               closePopUp(blackBg);
               closePopUp(button);
-              //closePopUp(closeBtn);
 
               function closePopUp(elem) {
                 if(!elem) return;
