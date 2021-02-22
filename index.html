@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="UTF-8"/>
 <style>
@@ -22,6 +23,15 @@ body, canvas {
    <input type="button" id="button" value="PLAY">    
 　　<iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 　　<audio id="audiofile" src="d1.mp3"></audio>
+    
+    <div class="popup" id="js-popup">
+      <div class="popup-inner">
+        <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+        <a href="#"><img src="./img/popup.jpg" alt="ポップアップ画像"></a>
+      </div>
+      <div class="black-background" id="js-black-bg"></div>
+    </div>
+    
 <img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
 <img src="Colorful_World.gif" style="position:absolute; top:250px; left:500px" class="Rotate90" />
 <img src="Colorful_World.gif" style="position:absolute; top:500px; left:250px" class="Rotate180" />
