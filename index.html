@@ -30,7 +30,9 @@ body, canvas {
     <script>
            var audiofile = document.getElementById("audiofile");
            var button = document.getElementById("button");
-           button.onclick("button pushed!")
+           button.onclick = function(){
+               console.log("button pushed!")
+           }
            console.log("This is index.html")
     </script>
 </html>
