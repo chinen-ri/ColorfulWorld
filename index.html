@@ -59,17 +59,15 @@
         // ポップアップを閉じる
         closePopUp(blackBg);
         closePopUp(button);
-        
+  
+        function closePopUp(elem) {
+            if(!elem) return;          
+            elem.addEventListener('click', function() {
+              popup.classList.remove('is-show');
+            })
+        }
       }
-    
-    // ポップアップを閉じるファンクション    
-    function closePopUp(elem) {
-        if(!elem) return;          
-        elem.addEventListener('click', function() {
-          popup.classList.remove('is-show');
-        })
-    }
-    
+       
     // 2. ボタンを押すとオーディオファイルを再生し、ホログラムを表示する
     button.onclick = function(){
         audiofile.play()
