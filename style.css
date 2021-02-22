@@ -9,7 +9,9 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 2px solid #555555;  
+  border: 2px solid #555555;
+  width:100%;
+  padding:10px;  
 }
 .popup-button:hover {
   background-color: #555555;
