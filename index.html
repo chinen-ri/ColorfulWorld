@@ -26,7 +26,7 @@
       <div class="popup-inner">
         <input type="button" id="button" value="PLAY">
       </div>
-      <!--<div class="black-background" id="js-black-bg"></div>-->
+      <div class="black-background" id="js-black-bg"></div>
     </div>
     <div id="hologram">
         <img src="Colorful_World.gif" style="transform: scale(-1, 1); position:absolute; top:0px;   left:250px" />
@@ -38,21 +38,13 @@
 <script>
     console.log("This is index.html")
     
-    
+    // 0. 変数定義
     var audiofile = document.getElementById("audiofile");
     var button = document.getElementById("button");
     var hologram = document.getElementById("hologram");
-    //var blackBg = document.getElementById('js-black-bg');
-  
-    // ボタンを押すとオーディオファイルを再生する
-    button.onclick = function(){
-        audiofile.play()
-        audiofile.loop = true
-        hologram.style.display = "block";
-    }
+    var blackBg = document.getElementById('js-black-bg');
     
-   
-    //windowロードしたときに実行するJS
+    // 1. windowロードしたときに実行するJS
     window.onload = function() {
         console.log("inside window.onload function")
         
@@ -64,18 +56,26 @@
         if(!popup) return;    
         popup.classList.add('is-show');
         
-        //var blackBg = document.getElementById('js-black-bg');
-        //var button = document.getElementById("button");
-        //closePopUp(blackBg);
+        // ポップアップを閉じる
+        closePopUp(blackBg);
         closePopUp(button);
         
-        // ポップアップを閉じる
-        function closePopUp(elem) {
-            if(!elem) return;          
-            elem.addEventListener('click', function() {
-              popup.classList.remove('is-show');
-            })
-        }
       }
+    
+    // ポップアップを閉じるファンクション    
+    function closePopUp(elem) {
+        if(!elem) return;          
+        elem.addEventListener('click', function() {
+          popup.classList.remove('is-show');
+        })
+    }
+    
+    // 2. ボタンを押すとオーディオファイルを再生し、ホログラムを表示する
+    button.onclick = function(){
+        audiofile.play()
+        audiofile.loop = true
+        hologram.style.display = "block";
+    }
+    
 </script>
 </html>
